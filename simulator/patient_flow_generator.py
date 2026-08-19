@@ -35,8 +35,8 @@ departments = [
     "Cardiology",
 ]
 
-# Gender categories
-genders = ["Male", "Female"]
+# Sex (assigned at birth) categories
+sex = ["Male", "Female"]
 
 
 def inject_dirty_data(record):
@@ -59,7 +59,7 @@ def generate_patient_event():
 
     event = {
         "patient_id": str(uuid.uuid4()),
-        "gender": random.choice(genders),
+        "sex": random.choice(sex),
         "age": random.randint(1, 100),
         "department": random.choice(departments),
         "admission_time": admission_time.isoformat(),
