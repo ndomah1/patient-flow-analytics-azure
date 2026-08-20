@@ -1,13 +1,13 @@
 # Real-Time Hospital Patient Flow & Bed Capacity Analytics Platform
 
-![Azure](https://img.shields.io/badge/Azure-Cloud-blue?logo=microsoft-azure&style=flat-square)[span_0](start_span)[span_0](end_span)
-![PySpark](https://img.shields.io/badge/PySpark-Big%20Data-orange?logo=apache-spark&style=flat-square)[span_1](start_span)[span_1](end_span)
-![Azure Data Factory](https://img.shields.io/badge/Azure-Data%20Factory-blue?logo=microsoft-azure&style=flat-square)[span_2](start_span)[span_2](end_span)
-![Azure Synapse](https://img.shields.io/badge/Azure-Synapse%20Analytics-blue?logo=microsoft-azure&style=flat-square)[span_3](start_span)[span_3](end_span)
+![Azure](https://img.shields.io/badge/Azure-Cloud-blue?logo=microsoft-azure&style=flat-square)
+![PySpark](https://img.shields.io/badge/PySpark-Big%20Data-orange?logo=apache-spark&style=flat-square)
+![Azure Data Factory](https://img.shields.io/badge/Azure-Data%20Factory-blue?logo=microsoft-azure&style=flat-square)
+![Azure Synapse](https://img.shields.io/badge/Azure-Synapse%20Analytics-blue?logo=microsoft-azure&style=flat-square)
 ![Python](https://img.shields.io/badge/Python-3.14+-yellow?logo=python&style=flat-square)
-![Databricks](https://img.shields.io/badge/Databricks-PySpark-red?logo=databricks&style=flat-square)[span_4](start_span)[span_4](end_span)
+![Databricks](https://img.shields.io/badge/Databricks-PySpark-red?logo=databricks&style=flat-square)
 ![PowerBI](https://img.shields.io/badge/Power%20BI-Dashboard-yellow?logo=power-bi&style=flat-square)
-![Git](https://img.shields.io/badge/Git-CI%2FCD-green?logo=git&style=flat-square)[span_5](start_span)[span_5](end_span)
+![Git](https://img.shields.io/badge/Git-CI%2FCD-green?logo=git&style=flat-square)
 
 An enterprise-grade, real-time data engineering platform designed to resolve clinical capacity bottlenecks, track departmental overstays, and monitor hospital bed turnover. Built using a **Medallion Lakehouse Architecture (Bronze $\rightarrow$ Silver $\rightarrow$ Gold)** on **Azure Databricks**, **Delta Lake**, **Azure Synapse Dedicated SQL Pools**, and **Power BI**.
 
