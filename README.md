@@ -47,7 +47,7 @@ The Gold Layer data loaded into Azure Synapse Analytics implements a **Star Sche
 
 ## 📊 Executive BI & Clinical Operations
 
-![Hospital Patient Flow Dashboard](power_bi/Hospital_Dashboard.jpg)
+![Hospital Patient Flow Dashboard](power_bi/hospital_dashboard.png)
 
 ### Core Operational KPIs Monitored
 * **Bed Turnover & Occupancy:** Real-time capacity utilization and bed availability across all inpatient units.
