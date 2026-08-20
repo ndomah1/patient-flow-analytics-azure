@@ -1,16 +1,15 @@
 # Real-Time Hospital Patient Flow & Bed Capacity Analytics Platform
 
-![Azure](https://img.shields.io/badge/Azure-Cloud_Platform-0078D4?logo=microsoft-azure&logoColor=white&style=flat-square)
-![Databricks](https://img.shields.io/badge/Databricks-Lakehouse-FF3621?logo=databricks&logoColor=white&style=flat-square)
-![Apache Spark](https://img.shields.io/badge/Apache_Spark-PySpark-E25A1C?logo=apache-spark&logoColor=white&style=flat-square)
-![Delta Lake](https://img.shields.io/badge/Delta_Lake-ACID_Storage-00ADD8?logo=delta-lake&logoColor=white&style=flat-square)
-![Azure Synapse](https://img.shields.io/badge/Azure_Synapse-Data_Warehouse-0078D4?logo=microsoft-azure&logoColor=white&style=flat-square)
-![Kafka / Event Hubs](https://img.shields.io/badge/Event_Hubs-Kafka_Streaming-231F20?logo=apache-kafka&logoColor=white&style=flat-square)
-![Power BI](https://img.shields.io/badge/Power_BI-Executive_BI-F2C811?logo=power-bi&logoColor=black&style=flat-square)
+![Azure](https://img.shields.io/badge/Azure-Cloud-blue?logo=microsoft-azure&style=flat-square)[span_0](start_span)[span_0](end_span)
+![PySpark](https://img.shields.io/badge/PySpark-Big%20Data-orange?logo=apache-spark&style=flat-square)[span_1](start_span)[span_1](end_span)
+![Azure Data Factory](https://img.shields.io/badge/Azure-Data%20Factory-blue?logo=microsoft-azure&style=flat-square)[span_2](start_span)[span_2](end_span)
+![Azure Synapse](https://img.shields.io/badge/Azure-Synapse%20Analytics-blue?logo=microsoft-azure&style=flat-square)[span_3](start_span)[span_3](end_span)
+![Python](https://img.shields.io/badge/Python-3.14+-yellow?logo=python&style=flat-square)
+![Databricks](https://img.shields.io/badge/Databricks-PySpark-red?logo=databricks&style=flat-square)[span_4](start_span)[span_4](end_span)
+![PowerBI](https://img.shields.io/badge/Power%20BI-Dashboard-yellow?logo=power-bi&style=flat-square)
+![Git](https://img.shields.io/badge/Git-CI%2FCD-green?logo=git&style=flat-square)[span_5](start_span)[span_5](end_span)
 
 An enterprise-grade, real-time data engineering platform designed to resolve clinical capacity bottlenecks, track departmental overstays, and monitor hospital bed turnover. Built using a **Medallion Lakehouse Architecture (Bronze $\rightarrow$ Silver $\rightarrow$ Gold)** on **Azure Databricks**, **Delta Lake**, **Azure Synapse Dedicated SQL Pools**, and **Power BI**.
-
----
 
 ## 🏛️ System Architecture
 
@@ -26,7 +25,6 @@ The pipeline processes high-throughput clinical event streams to deliver near re
 3. **Data Warehousing & Serving (Azure Synapse Analytics):** Dedicated SQL Pools and optimized analytical views deliver sub-second analytical query performance.
 4. **Executive Business Intelligence (Power BI):** A modern dark-mode operational dashboard connected to Synapse views, providing clinical decision-support metrics for hospital leadership.
 
----
 
 ## ⭐ Dimensional Modeling & Semantic Serving Layer
 
@@ -46,7 +44,6 @@ The Gold Layer data loaded into Azure Synapse Analytics implements a **Star Sche
 * `vw_avg_treatment_duration` & `vw_patient_volume_trends`: Inflow trajectory and treatment duration analytics across clinical services.
 * `vw_patient_demographics` & `vw_department_inflow`: Volume distribution and demographic stratification.
 
----
 
 ## 📊 Executive BI & Clinical Operations
 
@@ -58,7 +55,6 @@ The Gold Layer data loaded into Azure Synapse Analytics implements a **Star Sche
 * **Patient Volume Inflow & Demographics:** Inflow tracking and capacity demand stratified by clinical department and patient demographics.
 * **Average Treatment Duration:** Continuous monitoring of care delivery latency across specialized units (Cardiology, Oncology, ICU, Emergency, Surgery, Pediatrics, Maternity).
 
----
 
 ## 📁 Repository Structure
 
@@ -91,7 +87,6 @@ patient-flow-analytics-azure/
 └── README.md
 ```
 
----
 
 ## ⚙️ Technical Highlights & Engineering Decisions
 ⚬	**Delta Lake ACID Guarantees:** Implemented Delta Lake on ADLS Gen2 to ensure transaction reliability, schema enforcement, and point-in-time recovery during streaming ingestion.
