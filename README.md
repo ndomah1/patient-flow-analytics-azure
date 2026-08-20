@@ -89,7 +89,7 @@ patient-flow-analytics-azure/
 
 
 ## ⚙️ Technical Highlights & Engineering Decisions
-⚬	**Delta Lake ACID Guarantees:** Implemented Delta Lake on ADLS Gen2 to ensure transaction reliability, schema enforcement, and point-in-time recovery during streaming ingestion.
-⚬	**Decoupled Architecture:** Separated compute (Azure Databricks PySpark clusters) from storage (ADLS Gen2) and serving (Synapse SQL Pools) to scale ingestion and analytics independently.
-⚬	**Analytical View Optimization:** Pre-aggregated heavy window functions and KPIs within Synapse SQL views to eliminate compute bottlenecks on BI dashboard refreshes.
-⚬	**Resilient Ingestion:** Configured Kafka-compatible Event Hub consumer groups to support uninterrupted stream processing and checkpointing.
+- **Delta Lake ACID Guarantees:** Implemented Delta Lake on ADLS Gen2 to ensure transaction reliability, schema enforcement, and point-in-time recovery during streaming ingestion.
+- **Decoupled Architecture:** Separated compute (Azure Databricks PySpark clusters) from storage (ADLS Gen2) and serving (Synapse SQL Pools) to scale ingestion and analytics independently.
+- **Analytical View Optimization:** Pre-aggregated heavy window functions and KPIs within Synapse SQL views to eliminate compute bottlenecks on BI dashboard refreshes.
+- **Resilient Ingestion:** Configured Kafka-compatible Event Hub consumer groups to support uninterrupted stream processing and checkpointing.
