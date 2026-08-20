@@ -28,21 +28,22 @@ The pipeline processes high-throughput clinical event streams to deliver near re
 
 ## ⭐ Dimensional Modeling & Semantic Serving Layer
 
-The Gold Layer data loaded into Azure Synapse Analytics implements a **Star Schema** with dedicated analytical views designed for optimal BI querying performance:
+The Gold Layer data loaded into Azure Synapse Analytics implements a **Star Schema** with surrogate keys and dedicated analytical views designed for optimized BI querying performance:
 
 ![Dimensional Model Diagram](client_requirements/dimensional_model.png)
 
 ### Fact & Dimension Entities
-* **Fact Table (`fact_patient_flow`):** Granular transactional records tracking patient admission timestamps, discharge times, assigned bed IDs, and unit durations.
+* **Fact Table (`fact_patient_flow`):** Transactional records tracking admissions, discharges, active admission status flags, bed allocations, length of stay, and ingestion timestamps.
 * **Dimension Tables:**
-  * `dim_department`: Department identifiers, unit descriptions, and designated bed capacities.
-  * `dim_patient`: Patient demographics including administrative sex and age attributes.
+  * `dim_patient`: Patient demographics (`sex`, `age`) with SCD Type 2 tracking (`effective_from`, `effective_to`, `is_current`).
+  * `dim_department`: Department identifiers (`department`, `hospital_id`).
 
-### Analytical Serving Views (Synapse $\rightarrow$ Power BI)
-* `vw_bed_occupancy` & `vw_bed_turnover_rate`: Real-time bed utilization metrics and turnover frequency.
-* `vw_overstay_patients` & `vw_avg_length_of_stay`: Departmental overstay risk tracking against clinical thresholds.
-* `vw_avg_treatment_duration` & `vw_patient_volume_trends`: Inflow trajectory and treatment duration analytics across clinical services.
-* `vw_patient_demographics` & `vw_department_inflow`: Volume distribution and demographic stratification.
+### Analytical Serving Views (Synapse → Power BI)
+* `vw_bed_occupancy` & `vw_bed_turnover_rate`: Real-time bed occupancy percentages and turnover rates.
+* `vw_patient_demographics` & `vw_department_inflow`: Active patient headcounts and department-level volume distribution.
+* `vw_patient_volume_trend`: Temporal volume trends tracked over admission dates.
+* `vw_overstay_patients`: Inpatient monitoring flagging stays exceeding clinical thresholds (> 50 hours).
+* `vw_avg_treatment_duration`: Average length of stay and duration metrics across clinical departments.
 
 
 ## 📊 Executive BI & Clinical Operations
